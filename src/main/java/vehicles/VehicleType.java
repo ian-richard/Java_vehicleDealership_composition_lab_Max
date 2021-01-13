@@ -5,16 +5,15 @@ public abstract class VehicleType {
     private String make;
     private String model;
     private String colour;
-    private String engineSize;
-    private String engine;
-    private String tires;
 
-    public VehicleType(int Price, String make, String model, String colour, String engineSize, String engine, String tires){
+    private Engine engine;
+    private Tires tires;
+
+    public VehicleType(int price, String make, String model, String colour, Engine engine, Tires tires){
         this.price = price;
         this.make = make;
         this.model = model;
         this.colour = colour;
-        this.engineSize = engineSize;
         this.engine = engine;
         this.tires = tires;
 
@@ -36,15 +35,11 @@ public abstract class VehicleType {
         return colour;
     }
 
-    public String getEngineSize() {
-        return engineSize;
-    }
-
-    public String getEngine() {
+    public Engine getEngine() {
         return engine;
     }
 
-    public String getTires() {
+    public Tires getTires() {
         return tires;
     }
 }
